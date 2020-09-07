@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-2">
+        <img src="{{destination.icon.url}}" alt="" class=img-fluid>
+    </div>
+    <div class="col-10">
+        <a href="{{destination.url}}">
+            <h1>{{destination.title}}</h1>
+        </a>
+    </div>
+</div>
+
+<br />
+<div class="row">
+    <div class="col-12 px-5 mx-5">
+        <img src="{{destination.image.url}}" alt="" class="img-fluid" 
+        style="width: auto; max-height: 100%;">
+    </div>
+</div>
+
+<br />
+<div class="row">
+    <div class="col-6 text-left px-5 mx-5">
+        <h6>🕒 {{destination.pub_date_pretty}}</h6>
+    </div>
+</div>
+
+<br />
+<div class="row px-5">
+    <div class="col-12 px-5 ">
+        <p>{{destination.body}}</p>
+    </div>
+</div>
+
+{% endblock %} 
