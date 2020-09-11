@@ -43,11 +43,3 @@ def create(request):
 def detail(request, destination_id):
     destination = get_object_or_404(Destination, pk=destination_id)
     return render(request, 'destinations/detail.html', {'destination':destination})
-
-# @login_required(login_url="/accounts/signup")
-# def upvote(request, product_id):
-#     if request.method == 'POST':
-#         product = get_object_or_404(Destinations, pk=product_id)
-#         product.votes_total += 1
-#         product.save()
-#         return redirect('/products/' + str(product.id))
