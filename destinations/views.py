@@ -7,8 +7,8 @@ from django.utils import timezone
 
 
 def get_destination(request):
-    
-    return render(request, 'destinations/destinations.html',)
+    destinations = Destination.objects
+    return render(request, 'destinations/destinations.html',{'destinations': destinations})
 
 def home(request):
     destinations = Destination.objects
