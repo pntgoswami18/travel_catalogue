@@ -3,10 +3,10 @@ from django.contrib.auth.models import  User
 
 class Destination(models.Model):
     title=models.CharField(max_length=240)
-    pub_date=models.DateField(auto_now_add=False)
+    pub_date=models.DateField(auto_now_add=True)
     votes_total=models.IntegerField(default=0)
-    image=models.ImageField(upload_to="images/")
-    icon=models.ImageField(upload_to="icons/")
+    image=models.ImageField(upload_to="images/", blank=True)
+    icon=models.ImageField(upload_to="icons/", blank=True)
     body=models.TextField()
     latitude=models.FloatField(blank=True, null=True)
     longitude=models.FloatField(blank=True, null=True)
